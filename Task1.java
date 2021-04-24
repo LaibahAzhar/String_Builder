@@ -12,7 +12,7 @@ package stringbuilder.StringBuilder;
 public class Task1 {
     
    /*
-    method for getting the wod count
+    method for getting the word count
     @param String type s , enetered by the user
     @return the word count
     */
@@ -30,10 +30,16 @@ public class Task1 {
                return cnt;
     }
     
+    /*
+    method to getting the vowel count
+    @param the string type s entered by the user
+    @return the vowel count
+    */
     int vowelCounter(String s){
         int cnt=0 ;
         for(int i = 0 ; i< s.length() ; i++)
         {
+            //the following checks if any vowels exist and adds 1 to the count
             if(s.charAt(i)=='a' || s.charAt(i)=='A'|| s.charAt(i)=='e' || s.charAt(i)=='E'|| s.charAt(i)=='i' || s.charAt(i)=='I' || s.charAt(i)=='o' || s.charAt(i)=='O' || s.charAt(i)=='u' || s.charAt(i)=='U')
             {
                 cnt++;
@@ -41,4 +47,20 @@ public class Task1 {
         }
         return cnt;
     }
+    
+    int puncCounter(String s){
+        
+        int cnt=0 ;
+        for(int i = 0 ; i< s.length() ; i++)
+        {
+            //the following checks if any punctuation exist and adds 1 to the count
+            if(s.charAt(i)==',' || s.charAt(i)==';'|| s.charAt(i)==':' || s.charAt(i)=='.'|| s.charAt(i)=='?' || s.charAt(i)=='!' || s.charAt(i)=='-' || s.charAt(i)=='_' || s.charAt(i)==')' || s.charAt(i)=='(' || s.charAt(i)=='"')
+            {
+                cnt++;
+            }
+        }
+        return cnt;
+        
+    }
+    
 }

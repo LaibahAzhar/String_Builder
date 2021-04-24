@@ -23,6 +23,7 @@ public class Driver {
         String s1 = in.nextLine();
         System.out.println("The word count is "+ t1.wordCounter(s1));
         System.out.println("The vowels count is "+ t1.vowelCounter(s1));
+        System.out.println("The punctuation count is "+ t1.puncCounter(s1));
     }
     
 }
