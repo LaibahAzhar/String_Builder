@@ -40,6 +40,8 @@ public class Driver {
         //implementation of Task 3
         System.out.println("String is " + t3.removeInteger(s1) );
         System.out.println("String is " + t3.ridMultipleBlank(s1) );
+        System.out.println("String is " + t3.stringEncryption(s1) );
+        
     }
     
 }
