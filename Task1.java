@@ -48,6 +48,11 @@ public class Task1 {
         return cnt;
     }
     
+    /*
+    method to getting the punctuation count
+    @param the string type s entered by the user
+    @return the punctuation count
+    */
     int puncCounter(String s){
         
         int cnt=0 ;
@@ -61,6 +66,28 @@ public class Task1 {
         }
         return cnt;
         
+    }
+    
+    /*
+    method to find a substring thorghout the string
+    @param the string type s entered by the user and string type sub the user wants to find in the string
+    @return boolean true if sub-string is present else false if not present
+    */
+    boolean findSubString(String s , String sub)
+    {
+        for(int i = 0 ; i< s.length() ; i++)
+        {
+            for(int j = 0 ; j<sub.length() ; j++)
+            {
+                if(s.charAt(i)!= sub.charAt(j))
+                {
+                    break;
+                }else{
+                    return true;
+                }
+            }
+        }
+        return false;
     }
     
 }

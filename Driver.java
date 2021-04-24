@@ -24,6 +24,15 @@ public class Driver {
         System.out.println("The word count is "+ t1.wordCounter(s1));
         System.out.println("The vowels count is "+ t1.vowelCounter(s1));
         System.out.println("The punctuation count is "+ t1.puncCounter(s1));
+        System.out.println("Enter the sub-string you want to search ");
+        String sub = in.nextLine();
+        
+        if(t1.findSubString(s1,sub)==true)
+        {
+            System.out.println("The string contains '" + sub + "'");
+        }else{
+            System.out.println("The string does not contain '" + sub + "'");
+        }
     }
     
 }
