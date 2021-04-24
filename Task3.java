@@ -45,5 +45,39 @@ public class Task3 {
         return result;
     }
     
+    String stringEncryption(String s){
+        String encrypted ="";
+        char[] chars = s.toCharArray();
+        
+        for(char c : chars)
+        {
+            if(c==' '){
+                c='*';
+                encrypted = encrypted + c ;                
+            }else{
+                c++;
+                encrypted = encrypted + c; 
+            }
+        }
+        return encrypted;
+    }
+    
+//    Decryption
+//    String stringDecryption(String s){
+//        String decrypted ="";
+//        char[] chars = s.toCharArray();
+//        
+//        for(char c : chars)
+//        {
+//            if(c=='*'){
+//                c=' ';
+//                decrypted = decrypted + c ;                
+//            }else{
+//                c--;
+//                decrypted = decrypted + c; 
+//            }
+//        }
+//        return decrypted;
+//    }
    
 }
