@@ -21,11 +21,11 @@ public class Task1 {
         for( int i = 1 ; i < s.length() ; i++)
         {
             //the following ignores the blank space
-            if(s.charAt(i)==' ' )
+            if(s.charAt(i)==' ' || s.charAt(i)=='.' || s.charAt(i)==',' )
             {
-                cnt--;                
+                cnt++;                
             }
-            cnt++;
+           
         }
                return cnt;
     }
