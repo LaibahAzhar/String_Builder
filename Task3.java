@@ -11,7 +11,24 @@ package stringbuilder.StringBuilder;
  */
 public class Task3 {
     
+    /*
+    method to remove extra spaces
+    @param string tyoe s entered by user
+    @return string without extra spaces
+    */
+     String ridMultipleBlank(String s)
+    {
+       return s.replaceAll("\\s+"," ").trim();
+    }
     
+    
+    
+    
+    /*
+    method to remove integer from a string
+    @param String type s entered from the user
+    @return String type result without any integer
+    */
     String removeInteger(String s)
     {
        //Converting string to charArray
