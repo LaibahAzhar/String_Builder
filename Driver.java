@@ -22,6 +22,7 @@ public class Driver {
         System.out.println("Enter String");
         String s1 = in.nextLine();
         System.out.println("The word count is "+ t1.wordCounter(s1));
+        System.out.println("The vowels count is "+ t1.vowelCounter(s1));
     }
     
 }
