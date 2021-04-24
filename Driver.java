@@ -17,8 +17,11 @@ public class Driver {
      */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        Task1 t1 = new Task1();
         
+        Task1 t1 = new Task1();
+        Task3 t3 = new Task3();
+        
+        //implementation of Task 1
         System.out.println("Enter String");
         String s1 = in.nextLine();
         System.out.println("The word count is "+ t1.wordCounter(s1));
@@ -33,6 +36,9 @@ public class Driver {
         }else{
             System.out.println("The string does not contain '" + sub + "'");
         }
+        
+        //implementation of Task 3
+        System.out.println("String is " + t3.removeInteger(s1) );
     }
     
 }
