@@ -127,13 +127,60 @@ public class MyString{
         return sym;
     }
     
+    /*
+     * This function returns number of occurances of specified character in a string.
+     * @returns int
+     */
     public int numberOfOccurences(char ch){
         int occur = 0;
         for(int i=0; i<this.inputString.length(); i++){
-            if (this.inputString.charAt(i) == ch ){
+            if (this.inputString.charAt(i) == ch){
                 occur++;
             }
         }
         return occur;
+    }
+    
+    /*
+     * This function returns string without repeated characters.
+     * @returns int
+     */
+    public String removeRepeatedCharacters(){
+        int[] array = new int[inputString.length()];
+        int repeated = 0;
+        int size;
+        String output;
+        for(int n=0; n<inputString.length(); n++ ){
+            array[n] = -1;
+
+        }
+        
+        //finds total no. of repeated characters.
+        for(int i=0; i<this.inputString.length(); i++){
+            for (int y=i+1; y<this.inputString.length(); y++){
+                if (this.inputString.charAt(i) == this.inputString.charAt(y)){
+                    if (array[y] >= -1) {
+                        array[i]++;
+                        array[y]--;
+                        repeated++;
+                    }
+                }           
+            }
+        }
+        
+        //excludes repeated characters.
+        size = inputString.length() - repeated;
+        char[] arrayCh = new char [size];
+        for(int y=0, x=0; y<this.inputString.length(); y++){
+            if (array[y] >= -1){
+                arrayCh[x] = inputString.charAt(y);
+                x++;
+            }
+            else{
+                //ignores repeated ones
+            }
+        }
+        output = String.copyValueOf(arrayCh);
+        return output;
     }
 }

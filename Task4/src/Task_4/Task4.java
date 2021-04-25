@@ -29,8 +29,10 @@ public class Task4 {
                              + "2. Display number of spaces in a string.\n"
                              + "3. Make first letter of each word capital.\n"
                              + "4. Display number of special symbols in the string.\n"
-                             + "5. Display string without special symbols\n"
+                             + "5. Display string without special symbols.\n"
                              + "6. Display number of occurances of a character in the string.\n"
+                             + "7. Display string without repeatition of characters.\n"
+                             + "8. Call length()function of String Class through MyString Class\n"
                              + "0. close");
             System.out.println("Enter your option: ");
             option = scanner.nextInt();
@@ -87,6 +89,22 @@ public class Task4 {
                     System.out.println(s5.numberOfOccurences(ch));
                     break;
                     
+                case 7:
+                    System.out.println("Enter a string: ");
+                    input = scanner.nextLine();
+                    MyString s6 = new MyString(input);
+                    System.out.println("String without repeatition of characters: ");
+                    System.out.println(s6.removeRepeatedCharacters());
+                    break;
+                    
+                case 8:
+                    System.out.println("Enter a string: ");
+                    input = scanner.nextLine();
+                    MyString s7 = new MyString(input);
+                    System.out.println("Length of String using length()through MyString Class: ");
+                    System.out.println(s7.inputString.length());
+                    break;
+                     
                 case 0:
                     
                     break;
