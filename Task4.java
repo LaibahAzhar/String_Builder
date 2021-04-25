@@ -5,6 +5,7 @@
  */
 package stringbuilder.StringBuilder;
 
+import Task_4.MyString;
 import java.util.Scanner;
 
 /**
