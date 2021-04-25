@@ -23,7 +23,9 @@ public class Task1 {
             //the following ignores the blank space
             if(s.charAt(i)==' ' || s.charAt(i)=='.' || s.charAt(i)==',' )
             {
+
                 cnt = cnt++;
+
             }
            
         }
