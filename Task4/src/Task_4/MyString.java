@@ -76,5 +76,42 @@ public class MyString{
         return inputString;
     }
     
+    public String removeSpecialSymbols(){
+        String StrwithoutSymbols;
+        //Returns size exluding special symbols. 
+        int size = this.inputString.length()- this.numberOfSpecialSymbols();
+
+        char[] array = new char[size];
+        
+        //Exclusion of special symbols from a string
+        for(int y=0, x=0; y<this.inputString.length(); y++){
+            if ((this.inputString.charAt(y) >= '!' && this.inputString.charAt(y) <= '/') ||
+                (this.inputString.charAt(y) >= ':' && this.inputString.charAt(y) <= '@') ||
+                (this.inputString.charAt(y) >= '[' && this.inputString.charAt(y) <= '`') || 
+                (this.inputString.charAt(y) >= '{' && this.inputString.charAt(y) <= '~')){
+                //ignores special symbols
+            }
+            else{
+                array[x] = this.inputString.charAt(y);
+                x++;
+            }
+        }
+        
+        StrwithoutSymbols = String.copyValueOf(array);
+        
+        return StrwithoutSymbols;
+    }
     
+    public int numberOfSpecialSymbols(){
+        int sym = 0;
+        for(int i=0; i<this.inputString.length(); i++){
+            if ((this.inputString.charAt(i) >= '!' && this.inputString.charAt(i) <= '/') ||
+                (this.inputString.charAt(i) >= ':' && this.inputString.charAt(i) <= '@') ||
+                (this.inputString.charAt(i) >= '[' && this.inputString.charAt(i) <= '`') || 
+                (this.inputString.charAt(i) >= '{' && this.inputString.charAt(i) <= '~')){
+                sym++;
+            }
+        }
+        return sym;
+    }
 }

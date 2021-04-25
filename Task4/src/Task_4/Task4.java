@@ -28,6 +28,8 @@ public class Task4 {
             System.out.println("1. Display string without spaces.\n" 
                              + "2. Display number of spaces in a string.\n"
                              + "3. Make first letter of each word capital.\n"
+                             + "4. Display number of special symbols in the string.\n"
+                             + "5. Display string without special symbols\n"
                              + "0. close");
             System.out.println("Enter your option: ");
             option = scanner.nextInt();
@@ -56,6 +58,22 @@ public class Task4 {
                     MyString s2 = new MyString(input);
                     System.out.println("String with first letter of each word capital: ");
                     System.out.println(s2.FirstCharUpperCase());
+                    break;
+                    
+                case 4:
+                    System.out.println("Enter a string: ");
+                    input = scanner.nextLine();
+                    MyString s3 = new MyString(input);
+                    System.out.println("Number of special symbols: ");
+                    System.out.println(s3.numberOfSpecialSymbols());
+                    break;
+                    
+                case 5:
+                    System.out.println("Enter a string: ");
+                    input = scanner.nextLine();
+                    MyString s4 = new MyString(input);
+                    System.out.println("String without special symbols: ");
+                    System.out.println(s4.removeSpecialSymbols());
                     break;
                     
                 case 0:
