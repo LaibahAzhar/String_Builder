@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Task_4;
+package stringbuilder.StringBuilder;
 
 import java.util.Scanner;
 
