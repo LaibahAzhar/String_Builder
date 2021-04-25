@@ -58,4 +58,23 @@ public class MyString{
         return space;
     }
     
+    public String FirstCharUpperCase(){
+        char ch;
+        char[] array = new char[inputString.length()];
+        array = inputString.toCharArray();
+        for(int y=0; y<this.inputString.length(); y++){
+            if(y == 0 || inputString.charAt(y-1) == ' '){
+                if (this.inputString.charAt(y) >= 'a' && this.inputString.charAt(y) <= 'z') {
+                    
+                    ch = (char)(this.inputString.charAt(y) - 32);
+                    array[y] = ch;
+                }
+            }
+            
+        }
+        inputString = String.copyValueOf(array);
+        return inputString;
+    }
+    
+    
 }

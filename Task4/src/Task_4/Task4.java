@@ -27,6 +27,7 @@ public class Task4 {
             System.out.println("\n\nChoose an option: ");
             System.out.println("1. Display string without spaces.\n" 
                              + "2. Display number of spaces in a string.\n"
+                             + "3. Make first letter of each word capital.\n"
                              + "0. close");
             System.out.println("Enter your option: ");
             option = scanner.nextInt();
@@ -47,6 +48,14 @@ public class Task4 {
                     MyString s1 = new MyString(input);
                     System.out.println("Number of spaces: ");
                     System.out.println(s1.numberOfSpaces());
+                    break;
+                    
+                case 3:
+                    System.out.println("Enter a string: ");
+                    input = scanner.nextLine();
+                    MyString s2 = new MyString(input);
+                    System.out.println("String with first letter of each word capital: ");
+                    System.out.println(s2.FirstCharUpperCase());
                     break;
                     
                 case 0:
