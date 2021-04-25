@@ -6,7 +6,7 @@
 package Task_4;
 
 /**
- * 
+ * Class MyString contains string manipulative functions.
  * @author Maryam Ejaz
  */
 public class MyString{
@@ -58,6 +58,10 @@ public class MyString{
         return space;
     }
     
+    /*
+     * This function converts first letter of each word into upper case.
+     * @returns String
+     */
     public String FirstCharUpperCase(){
         char ch;
         char[] array = new char[inputString.length()];
@@ -76,6 +80,10 @@ public class MyString{
         return inputString;
     }
     
+    /*
+     * This function removes special symbols from the string
+     * @returns String
+     */
     public String removeSpecialSymbols(){
         String StrwithoutSymbols;
         //Returns size exluding special symbols. 
@@ -102,6 +110,10 @@ public class MyString{
         return StrwithoutSymbols;
     }
     
+    /*
+     * This function returns number of special symbols in a string.
+     * @returns int
+     */
     public int numberOfSpecialSymbols(){
         int sym = 0;
         for(int i=0; i<this.inputString.length(); i++){
@@ -113,5 +125,15 @@ public class MyString{
             }
         }
         return sym;
+    }
+    
+    public int numberOfOccurences(char ch){
+        int occur = 0;
+        for(int i=0; i<this.inputString.length(); i++){
+            if (this.inputString.charAt(i) == ch ){
+                occur++;
+            }
+        }
+        return occur;
     }
 }

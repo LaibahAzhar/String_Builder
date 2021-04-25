@@ -30,6 +30,7 @@ public class Task4 {
                              + "3. Make first letter of each word capital.\n"
                              + "4. Display number of special symbols in the string.\n"
                              + "5. Display string without special symbols\n"
+                             + "6. Display number of occurances of a character in the string.\n"
                              + "0. close");
             System.out.println("Enter your option: ");
             option = scanner.nextInt();
@@ -74,6 +75,16 @@ public class Task4 {
                     MyString s4 = new MyString(input);
                     System.out.println("String without special symbols: ");
                     System.out.println(s4.removeSpecialSymbols());
+                    break;
+                    
+                case 6:
+                    System.out.println("Enter a string: ");
+                    input = scanner.nextLine();
+                    System.out.println("Enter the character, you want to find occurances of: ");
+                    char ch = scanner.next().charAt(0);
+                    MyString s5 = new MyString(input);
+                    System.out.println("Number of occurances of " + ch + " in string: ");
+                    System.out.println(s5.numberOfOccurences(ch));
                     break;
                     
                 case 0:
