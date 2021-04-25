@@ -27,8 +27,9 @@ public class Driver {
         System.out.println("The word count is "+ t1.wordCounter(s1));
         System.out.println("The vowels count is "+ t1.vowelCounter(s1));
         System.out.println("The punctuation count is "+ t1.puncCounter(s1));
-        System.out.print("Enter the sub-string you want to search ");
-        System.out.print("Enter the sub-string you want to search ");
+
+
+        System.out.println("Enter sub-string to search ");
         String sub = in.nextLine();
         
         if(t1.findSubString(s1,sub)==true)
